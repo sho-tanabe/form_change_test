@@ -161,51 +161,25 @@
                 <input class="form-control w-75 mx-auto" id="nametest" name="entry.2144812415" type="number" maxlength="10" placeholder="00000">
                 <br>
 
+
                 <!--選択項目次第で入力項目を動的にするテスト開始-->
 
                 <select id="ex_age_b">
-                    <option value="answer1">ガス会社からの直接の連絡を希望する。（よりスピーディーな切り替えが可能です。）</option>
-                    <option value="answer2">順子の窓口からの連絡を希望する。（より慎重に切り替えを検討したい方向けです。）</option>
+                    <option value="under">20歳未満</option>
+                    <option value="over">20歳以上</option>
                 </select>
 
 
-                <!--フォームチェンジの動作に入力欄がついてこれるかのtest開始-->
-
-                <!--旧情報--
                 <div id="ex_box_div_b" style="display:none;">
                     <input id="ex_box_b" type="text" />
-                </div>-->
-                
-                
-                
-
-                <!--試行中情報-->
-                <div id="ex_box_div_b" style="display:none;">
-                    <!--<input id="ex_box_b" name="ex_box_b" type="text" maxlength="10" placeholder="aaaa" class="form-control form-control-lg" />
-                    <label for="ex_box_b">
-                        <font size="-1" color="black">入力欄でーす</font>
-                        <font size="-2" color="gray">入力してねー</font>
-                    </label>
-                    <div class="valid-feedback">Good!</div>
-                    <div class="invalid-feedback">Required.</div>-->
-
-
-                    <input id="ex_box_b" type="text" />
-
-                
-                
-                
                 </div>
-                
-                
-                <!--フォームチェンジの動作に入力欄がついてこれるかのtest終了-->
 
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
                 <script>
                     document.getElementById("ex_age_b").addEventListener("change", function(){
                         var age_elem = document.getElementById("ex_age_b");
-                        var s_value = age_elem.options[age_elem.selectedIndex].value;                        
+                        var s_value = age_elem.options[age_elem.selectedIndex].value;
                         if(s_value == "under"){
                             $("#ex_box_div_b").hide("normal");
                         }else{
@@ -213,7 +187,7 @@
                         }
                     }, false);
                 </script>
-
+                
                 <!--選択項目次第で入力項目を動的にするテスト終了-->
 
 

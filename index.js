@@ -142,7 +142,7 @@ $(function () {
     $('document.getElementById("ex_age_b")').addEventListener("change", function(){
         var age_elem = document.getElementById("ex_age_b");
         var s_value = age_elem.options[age_elem.selectedIndex].value;	
-        if(s_value == "under"){
+        if(s_value == "answer_a"){
             $("#ex_box_div_b").hide("normal");
         }else{
             $("#ex_box_div_b").show("normal");

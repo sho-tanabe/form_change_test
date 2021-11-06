@@ -161,6 +161,36 @@
                 <input class="form-control w-75 mx-auto" id="nametest" name="entry.2144812415" type="number" maxlength="10" placeholder="00000">
                 <br>
 
+                <!--選択項目次第で入力項目を動的にするテスト開始-->
+
+                <select id="ex_age_b">
+                    <option value="under">20歳未満</option>
+                    <option value="over">20歳以上</option>
+                </select>
+
+
+                <div id="ex_box_div_b" style="display:none;">
+                    <input id="ex_box_b" type="text" />
+                </div>
+
+
+                <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+                <script>
+                    document.getElementById("ex_age_b").addEventListener("change", function(){
+                        var age_elem = document.getElementById("ex_age_b");
+                        var s_value = age_elem.options[age_elem.selectedIndex].value;                        
+                        if(s_value == "under"){
+                            $("#ex_box_div_b").hide("normal");
+                        }else{
+                            $("#ex_box_div_b").show("normal");
+                        }
+                    }, false);
+                </script>
+
+                <!--選択項目次第で入力項目を動的にするテスト終了-->
+
+
+                
             <!--test中のため一時停止
             <p class="w-100 mx-3">ご請求予定金額(円)</p>
             <input class="form-control w-75 mx-auto" id="billingamount" name="billingamount" type="number" maxlength="10" placeholder="00000" required>

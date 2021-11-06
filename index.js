@@ -144,8 +144,21 @@ $(function () {
         var s_value = age_elem.options[age_elem.selectedIndex].value;	
         if(s_value == "answer1"){
             $("#ex_box_div_b").hide("normal");
+            $("#changetest1").hide("normal");
+            $("#changetest2").hide("normal");
+            $("#changetest3").show("normal");
+            $("#changetest4").show("normal");
+            $("#changetest5").show("normal");
+
         }else{
             $("#ex_box_div_b").show("normal");
+            $("#changetest1").show("normal");
+            $("#changetest2").show("normal");
+            $("#changetest3").hide("normal");
+            $("#changetest4").hide("normal");
+            $("#changetest5").hide("normal");
+
+            
         }
     }, false);
     ////選択肢に応じて動的に項目を表示非表示させるファンクションのテスト開始

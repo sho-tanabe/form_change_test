@@ -174,7 +174,7 @@
                     <div class="form-floating">
                         <input class="form-control form-control-lg mx-auto" id="ex_box_b" type="text"  placeholder="aaaaa" />
                         <label for="ex_box_b">
-                            <font size="-1" color="gray">項目１だよ</font>
+                            <font size="-1" color="gray">直連絡：項目１だよ</font>
                             <font size="-2" color="gray">こちらに入力して下さい</font>
                         </label>
                         <div class="valid-feedback">Good!</div>
@@ -183,13 +183,36 @@
                     <div class="form-floating">
                         <input class="form-control form-control-lg mx-auto" id="changetest1" type="text"  placeholder="aaaaa" />
                         <label for="changetest1">
-                            <font size="-1" color="gray">項目２だよ</font>
+                            <font size="-1" color="gray">直連絡：項目２だよ</font>
                             <font size="-2" color="gray">こちらに入力して下さい</font>
                         </label>
                         <div class="valid-feedback">Good!</div>
                         <div class="invalid-feedback">Required.</div>
                     </div>
                 </div>
+                
+                                
+                <div id="ex_box_div_x" style="display:none;">
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg mx-auto" id="changetest2" type="text"  placeholder="aaaaa" />
+                        <label for="changetest2">
+                            <font size="-1" color="gray">順子連絡：項目２だよ</font>
+                            <font size="-2" color="gray">こちらに入力して下さい</font>
+                        </label>
+                        <div class="valid-feedback">Good!</div>
+                        <div class="invalid-feedback">Required.</div>
+                    </div>  
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg mx-auto" id="changetest3" type="text"  placeholder="aaaaa" />
+                        <label for="changetest3">
+                            <font size="-1" color="gray">順子連絡：項目３だよ</font>
+                            <font size="-2" color="gray">こちらに入力して下さい</font>
+                        </label>
+                        <div class="valid-feedback">Good!</div>
+                        <div class="invalid-feedback">Required.</div>
+                    </div>
+                </div>
+
 
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -199,8 +222,10 @@
                         var s_value = age_elem.options[age_elem.selectedIndex].value;
                         if(s_value == "under"){
                             $("#ex_box_div_b").hide("normal");
+                            $("#ex_box_div_x").show("normal");
                         }else{
                             $("#ex_box_div_b").show("normal");
+                            $("#ex_box_div_x").hide("normal");
                         }
                     }, false);
                 </script>

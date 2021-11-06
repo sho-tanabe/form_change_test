@@ -136,4 +136,20 @@ $(function () {
 
     });
     
+    
+    
+    ////選択肢に応じて動的に項目を表示非表示させるファンクションのテスト開始
+    $('document.getElementById("ex_age_b")').addEventListener("change", function(){
+        var age_elem = document.getElementById("ex_age_b");
+        var s_value = age_elem.options[age_elem.selectedIndex].value;	
+        if(s_value == "under"){
+            $("#ex_box_div_b").hide("normal");
+        }else{
+            $("#ex_box_div_b").show("normal");
+        }
+    }, false);
+    ////選択肢に応じて動的に項目を表示非表示させるファンクションのテスト開始
+    
+    
+    
 });

@@ -166,11 +166,10 @@
 
                 <select id="ex_age_b" class="form-control mx-auto">
                     <option value="default">選択して下さい</option>
-                    <option value="under">ガス会社からの直接の連絡を希望する。（よりスピーディーな切り替えが可能です。）</option>
-                    <option value="over">順子の窓口からの連絡を希望する。（より慎重に切り替えを検討したい方向けです。）</option>
+                    <option value="answer1">ガス会社からの直接の連絡を希望する。（よりスピーディーな切り替えが可能です。）</option>
+                    <option value="answer2">順子の窓口からの連絡を希望する。（より慎重に切り替えを検討したい方向けです。）</option>
                 </select>
                 <br>
-
                 <div id="ex_box_div_b" style="display:none;">
 
                     <div class="form-floating">
@@ -194,7 +193,7 @@
                     </div>
                 
                 </div>
-                                
+                <br>                
                 <div id="ex_box_div_x" style="display:none;">
                     
                     <div class="form-floating">
@@ -218,7 +217,32 @@
                     </div>
                 
                 </div>
+                
+                <br>
 
+                <div id="ex_box_div_y" style="display:none;">
+                    
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg mx-auto" id="changetest4" type="text"  placeholder="aaaaa" />
+                        <label for="changetest4">
+                            <font size="-1" color="gray">共通：項目1だよ</font>
+                            <font size="-2" color="gray">こちらに入力して下さい</font>
+                        </label>
+                        <div class="valid-feedback">Good!</div>
+                        <div class="invalid-feedback">Required.</div>
+                    </div>  
+                    <br>
+                    <div class="form-floating">
+                        <input class="form-control form-control-lg mx-auto" id="changetest5" type="text"  placeholder="aaaaa" />
+                        <label for="changetest5">
+                            <font size="-1" color="gray">共通：項目2だよ</font>
+                            <font size="-2" color="gray">こちらに入力して下さい</font>
+                        </label>
+                        <div class="valid-feedback">Good!</div>
+                        <div class="invalid-feedback">Required.</div>
+                    </div>
+                
+                </div>
 
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -226,12 +250,14 @@
                     document.getElementById("ex_age_b").addEventListener("change", function(){
                         var age_elem = document.getElementById("ex_age_b");
                         var s_value = age_elem.options[age_elem.selectedIndex].value;
-                        if(s_value == "under"){
+                        if(s_value == "answer1"){
                             $("#ex_box_div_b").show("normal");
                             $("#ex_box_div_x").hide("normal");
+                            $("#ex_box_div_y").show("normal");
                         }else{
                             $("#ex_box_div_b").hide("normal");
                             $("#ex_box_div_x").show("normal");
+                            $("#ex_box_div_y").show("normal");
                         }
                     }, false);
                 </script>

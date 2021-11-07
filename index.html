@@ -340,21 +340,22 @@
 
 
                 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+ 
                 <script>
-                    document.getElementById("ex_age_a").addEventListener("change", function(){
-                        var age_elem_1 = document.getElementById("ex_age_a");
-                        <!-->var s_value_1 = age_elem_1.options[age_elem_1.selectedIndex].value;<-->
-                        var s_value_1 = age_elem_1.value;
-                        if(s_value_1 == "answer11"){
-                            $("#ex_box_div_b1").show("normal");
-                            $("#ex_box_div_x1").hide("normal");
-                            $("#ex_box_div_y1").show("normal");
-                        }else{
-                            $("#ex_box_div_b1").hide("normal");
-                            $("#ex_box_div_x1").show("normal");
-                            $("#ex_box_div_y1").show("normal");
-                        }
-                    }, false);
+                     $('input').change(function() {
+                         var text = $(this).val();
+                         var s_value_1 = text;                    
+                         if(s_value_1 == "answer11"){
+                             $("#ex_box_div_b1").show("normal");                        
+                             $("#ex_box_div_x1").hide("normal");
+                             $("#ex_box_div_y1").show("normal");                        
+                         }else{
+                             $("#ex_box_div_b1").hide("normal");                        
+                             $("#ex_box_div_x1").show("normal");
+                             $("#ex_box_div_y1").show("normal");                        
+                         }
+                     }, false);
                 </script>
                 
                 <!--選択項目次第で入力項目を動的にするテスト終了-->

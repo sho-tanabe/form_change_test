@@ -343,7 +343,8 @@
                 <script>
                     document.getElementById("ex_age_a").addEventListener("change", function(){
                         var age_elem_1 = document.getElementById("ex_age_a");
-                        var s_value_1 = age_elem_1.options[age_elem_1.selectedIndex].value;
+                        <!-->var s_value_1 = age_elem_1.options[age_elem_1.selectedIndex].value;<-->
+                        var s_value_1 = age_elem_1.value;
                         if(s_value_1 == "answer11"){
                             $("#ex_box_div_b1").show("normal");
                             $("#ex_box_div_x1").hide("normal");
